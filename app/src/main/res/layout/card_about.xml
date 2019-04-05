@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="viewModel"
+            type="net.acosta.mike.resume.viewmodel.ContentViewModel" />
+    </data>
+    <androidx.cardview.widget.CardView
+        style="@style/Widget.Jobs.CardView"
+        android:id="@+id/cardViewAbout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="@{viewModel.isAboutVisible ? View.VISIBLE : View.GONE}"
+        tools:ignore="ContentDescription">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewAbout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/textMargin"
+                android:text="@string/aboutCard"
+                android:textColor="@color/colorAccent"
+                android:textAppearance="@style/TextAppearance.Resume.Subtitle2" />
+
+            <LinearLayout
+                android:id="@+id/layoutAboutEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/textMargin"
+                    android:src="@drawable/ic_email_black_24dp" />
+
+                <TextView
+                    android:id="@+id/textViewEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/textMargin"
+                    android:text="@{viewModel.email}" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutAboutWeb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/textMargin"
+                    android:src="@drawable/ic_web_white_24dp" />
+
+                <TextView
+                    android:id="@+id/textViewWeb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/textMargin"
+                    android:text="@{viewModel.web}" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutAboutGithub"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/textMargin"
+                    android:src="@drawable/github" />
+
+                <TextView
+                    android:id="@+id/textViewGithub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/textMargin"
+                    android:text="@{viewModel.github}" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutAboutMsCert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/textMargin"
+                    android:src="@drawable/ic_microsoft" />
+
+                <TextView
+                    android:id="@+id/textViewMsCert"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/textMargin"
+                    android:text="@string/msCertTitle" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutAboutCert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/textMargin"
+                    android:src="@drawable/ic_baseline_android_24px" />
+
+                <TextView
+                    android:id="@+id/textViewCert"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/textMargin"
+                    android:text="@string/certTitle" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutAboutGooglePlay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/textMargin"
+                    android:src="@drawable/ic_shop_black_24dp" />
+
+                <TextView
+                    android:id="@+id/textViewAboutGooglePlay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/textMargin"
+                    android:text="@string/googlePlay" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

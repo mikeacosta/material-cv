@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="textMargin">16dp</dimen>
+    <dimen name="cardTitleMargin">16dp</dimen>
+    <dimen name="cardMarginHorizontal">16dp</dimen>
+    <dimen name="textMarginSmall">8dp</dimen>
+    <dimen name="fabMarginBottom">16dp</dimen>
+    <dimen name="fabMarginEnd">16dp</dimen>
+</resources>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="viewModel"
+            type="net.acosta.mike.resume.viewmodel.ContentViewModel" />
+    </data>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewAboutTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="@{viewModel.isAboutVisible ? View.VISIBLE : View.GONE}"
+        style="@style/Widget.Jobs.CardView">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:focusable="true"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/imageViewAboutTop"
+                android:layout_width="64dp"
+                android:layout_height="128dp"
+                android:background="@color/veryLightGray"
+                android:scaleType="centerInside"
+                android:src="@mipmap/ic_launcher_round" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/textMargin"
+                android:layout_marginStart="@dimen/cardTitleMargin"
+                android:layout_toEndOf="@id/imageViewAboutTop">
+
+                <TextView
+                    android:id="@+id/textViewAboutTop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/aboutCardTop"
+                    android:textColor="@color/colorAccent"
+                    android:textAppearance="@style/TextAppearance.Resume.Subtitle1" />
+
+                <TextView
+                    android:id="@+id/textViewVersion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textViewAboutTop"
+                    android:layout_marginTop="@dimen/textMarginSmall"
+                    android:lineSpacingExtra="@dimen/textMarginSmall"
+                    android:text="@{@string/version(viewModel.versionName)}" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

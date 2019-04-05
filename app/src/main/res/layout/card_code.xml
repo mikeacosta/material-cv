@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="viewModel"
+            type="net.acosta.mike.resume.viewmodel.ContentViewModel" />
+    </data>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="@{viewModel.isCodeVisible ? View.VISIBLE : View.GONE}"
+        style="@style/Widget.Jobs.CardView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageViewAndroidStudio"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:background="@color/gray"
+                android:scaleType="centerInside"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:src="@drawable/ic_android_studio"
+                tools:ignore="ContentDescription" />
+
+            <net.acosta.mike.resume.ui.support.LinkTextView
+                android:id="@+id/textViewCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="@{viewModel.codeSpanned}"
+                android:textAppearance="@style/Widget.Resume.LinkTextView" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

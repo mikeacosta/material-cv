@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Michael Acosta</string>
+    <string name="summary">Summary</string>
+    <string name="creds">Creds</string>
+    <string name="about">About</string>
+    <string name="code">Code</string>
+    <string name="highlights">Highlights</string>
+    <string name="skills">Skills</string>
+    <string name="github">GitHub</string>
+    <string name="web">Website</string>
+    <string name="contact">Contact</string>
+    <string name="bullet">\u2022</string>
+    <string name="profile">Profile</string>
+    <string name="work">Work</string>
+    <string name="info">Info</string>
+    <string name="comingSoon">Coming soon</string>
+    <string name="googlePlay">Rate on Google Play</string>
+    <string name="aboutCard">Thank you for viewing. Your feedback is welcome.</string>
+    <string name="aboutCardTop">Michael Acosta - Resume</string>
+    <string name="version">Version %1$s</string>
+    <string name="more">More</string>
+    <string name="errorMsg">The was an error retrieving data.</string>
+    <string name="emailSubject">Android Resume App</string>
+    <string name="certTitle">Google Developers Certification</string>
+    <string name="openWith">Open with</string>
+    <string name="shareWith">Share with</string>
+    <string name="shareContent">Material Design resume app by Mike Acosta:</string>
+    <string name="appUrl">https://play.google.com/store/apps/details?id=net.acosta.mike.resume</string>
+    <string name="viewCert">View Certificate</string>
+    <string name="msCertTitle">Microsoft Certified Professional</string>
+</resources>
