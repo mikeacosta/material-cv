@@ -24,3 +24,10 @@ val migration3to4: Migration = object : Migration(3, 4) {
         database.execSQL("ALTER TABLE content ADD COLUMN msCert TEXT")
     }
 }
+
+val migration4to5: Migration = object : Migration(4, 5) {
+    override fun migrate(database: SupportSQLiteDatabase) {
+        database.execSQL("DELETE FROM content")
+        database.execSQL("ALTER TABLE content ADD COLUMN api TEXT")
+    }
+}

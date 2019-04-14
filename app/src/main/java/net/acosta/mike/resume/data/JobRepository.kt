@@ -56,9 +56,9 @@ class JobRepository @Inject constructor(private val apiClient: ApiClient,
 
                 call.enqueue(object: Callback<Jobs> {
                     override fun onResponse(call: Call<Jobs>, response: Response<Jobs>?) {
-                        jobs.value = response?.body()?.jobs
+                        jobs.value = response?.body()?.items
                         executor.execute {
-                            response?.body()?.jobs?.forEach { it ->
+                            response?.body()?.items?.forEach { it ->
                                 it.lastUpdate = Date()
                                 jobDao.insert(it)
                             }

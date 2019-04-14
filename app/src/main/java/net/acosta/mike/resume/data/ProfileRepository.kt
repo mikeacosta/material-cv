@@ -41,9 +41,9 @@ class ProfileRepository @Inject constructor(private val apiClient: ApiClient,
 
                 call.enqueue(object: Callback<Profile> {
                     override fun onResponse(call: Call<Profile>?, response: Response<Profile>?) {
-                        profile.value = response?.body()?.profile
+                        profile.value = response?.body()?.items
                         executor.execute {
-                            response?.body()?.profile?.forEach { it ->
+                            response?.body()?.items?.forEach { it ->
                                 it.lastUpdate = Date()
                                 profileDao.insert(it)
                             }

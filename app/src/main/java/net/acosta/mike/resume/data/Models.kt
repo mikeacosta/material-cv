@@ -16,7 +16,7 @@ data class Job(@PrimaryKey(autoGenerate = false) val id: Int,
                val content: List<String>,
                var lastUpdate: Date?)
 
-data class Jobs(val jobs: List<Job>)
+data class Jobs(val items: List<Job>)
 
 @Entity(tableName = "content")
 data class Content(@PrimaryKey(autoGenerate = true) var id: Long?,
@@ -36,9 +36,10 @@ data class Content(@PrimaryKey(autoGenerate = true) var id: Long?,
                    var lastUpdate: Date?,
                    val msCertMain: String,
                    val msCertAction: String,
-                   val msCert: String)
+                   val msCert: String,
+                   val api: String)
 
-data class Profile(val profile: List<ProfileItem>)
+data class Profile(val items: List<ProfileItem>)
 
 @Entity(tableName = "profile")
 data class ProfileItem(@PrimaryKey(autoGenerate = true) var id: Long?,

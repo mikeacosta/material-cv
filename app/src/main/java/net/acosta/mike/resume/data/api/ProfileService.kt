@@ -5,6 +5,6 @@ import retrofit2.Call
 import retrofit2.http.GET
 
 interface ProfileService {
-    @GET("/api/resume/profile")
+    @GET("/Prod/api/profile")
     fun getProfile(): Call<Profile>
 }

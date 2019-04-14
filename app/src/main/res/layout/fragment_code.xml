@@ -35,6 +35,11 @@
                     android:scrollbars="vertical">
 
                     <include
+                        android:id="@+id/includeCardApi"
+                        layout="@layout/card_api"
+                        app:viewModel="@{viewModel}" />
+
+                    <include
                         android:id="@+id/includeCardCode"
                         layout="@layout/card_code"
                         app:viewModel="@{viewModel}" />

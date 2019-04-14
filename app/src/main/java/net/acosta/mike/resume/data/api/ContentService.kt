@@ -6,6 +6,6 @@ import retrofit2.http.GET
 
 
 interface ContentService {
-    @GET("/api/resume/content")
+    @GET("/Prod/api/content")
     fun getContent(): Call<Content>
 }

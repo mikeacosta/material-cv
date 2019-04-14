@@ -121,7 +121,7 @@
             android:id="@+id/imageViewProfile"
             android:layout_width="96dp"
             android:layout_height="96dp"
-            android:src="@drawable/profile" />
+            android:src="@drawable/profile1" />
 
     </FrameLayout>
 

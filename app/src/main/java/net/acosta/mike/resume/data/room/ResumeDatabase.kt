@@ -8,7 +8,7 @@ import androidx.room.TypeConverters
 import net.acosta.mike.resume.data.*
 
 
-@Database(entities = arrayOf(Content::class, ProfileItem::class, Job::class), version = 3)
+@Database(entities = arrayOf(Content::class, ProfileItem::class, Job::class), version = 5)
 @TypeConverters(Converters::class)
 abstract class ResumeDatabase : RoomDatabase() {
 
@@ -26,7 +26,7 @@ abstract class ResumeDatabase : RoomDatabase() {
                 synchronized(ResumeDatabase::class) {
                     INSTANCE = Room.databaseBuilder(context.applicationContext,
                             ResumeDatabase::class.java, "resume.db")
-                            .addMigrations(migration1to2, migration2to3, migration3to4)
+                            .addMigrations(migration1to2, migration2to3, migration3to4, migration4to5)
                             .build()
                 }
             }

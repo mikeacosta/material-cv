@@ -6,7 +6,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 
-class ApiClient(baseUrl: String = "http://demo3886988.mockable.io") {
+class ApiClient(baseUrl: String = "https://kynp81ncr8.execute-api.us-west-2.amazonaws.com") {
     private val jobService: JobService
     private val contentService: ContentService
     private val profileService: ProfileService

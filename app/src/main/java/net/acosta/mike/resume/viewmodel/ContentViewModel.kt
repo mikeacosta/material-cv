@@ -34,6 +34,9 @@ class ContentViewModel @Inject constructor(val repo: Repository<Content>) : View
     var github: String? = null
         get() = content.value?.github
 
+    var apiSpanned: Spanned? = null
+        get() = content.value?.api?.toSpanned()
+
     fun getContent(): LiveData<Content> {
         return content
     }

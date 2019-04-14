@@ -8,7 +8,7 @@ import javax.inject.Singleton
 @Module
 class NetworkModule {
     companion object {
-        private const val BASE_URL = "http://demo3886988.mockable.io"
+        private const val BASE_URL = "https://kynp81ncr8.execute-api.us-west-2.amazonaws.com"
     }
 
     @Provides
