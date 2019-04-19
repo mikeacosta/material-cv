@@ -22,7 +22,7 @@
             android:padding="20dp"
             android:src="@drawable/mcp"
             android:background="@color/gray"
-            app:layout_constraintDimensionRatio="H,16:9"
+            app:layout_constraintDimensionRatio="H,21:9"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

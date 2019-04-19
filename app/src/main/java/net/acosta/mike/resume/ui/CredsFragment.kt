@@ -17,6 +17,7 @@ import kotlinx.android.synthetic.main.fragment_creds.*
 import kotlinx.android.synthetic.main.card_cert.view.*
 import kotlinx.android.synthetic.main.card_edu.*
 import kotlinx.android.synthetic.main.card_edu.view.*
+import kotlinx.android.synthetic.main.card_mscert.*
 import kotlinx.android.synthetic.main.card_mscert.view.*
 import net.acosta.mike.resume.App
 import net.acosta.mike.resume.R
@@ -94,6 +95,7 @@ class CredsFragment : Fragment() {
         viewModel = ViewModelProviders.of(parentFragment!!, viewModelFactory).get(ContentViewModel::class.java)
 
         progressBar.visibility = View.VISIBLE
+        cardViewMsCert.visibility = View.GONE
         cardViewCert.visibility = View.GONE
         cardViewEdu.visibility = View.GONE
 
@@ -116,6 +118,7 @@ class CredsFragment : Fragment() {
             certUrl = creds.googleCert
             msCertUrl = creds.msCert
 
+            cardViewMsCert.visibility = View.VISIBLE
             cardViewCert.visibility = View.VISIBLE
             cardViewEdu.visibility = View.VISIBLE
             progressBar.visibility = View.INVISIBLE
