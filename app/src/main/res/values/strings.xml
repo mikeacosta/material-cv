@@ -28,4 +28,5 @@
     <string name="appUrl">https://play.google.com/store/apps/details?id=net.acosta.mike.resume</string>
     <string name="viewCert">View Certificate</string>
     <string name="msCertTitle">Microsoft Certified Professional</string>
+    <string name="tokenKey">token_key</string>
 </resources>

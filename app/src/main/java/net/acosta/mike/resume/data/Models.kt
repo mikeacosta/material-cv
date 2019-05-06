@@ -46,3 +46,5 @@ data class ProfileItem(@PrimaryKey(autoGenerate = true) var id: Long?,
                        val type: ProfileType,
                        val text: String,
                        var lastUpdate: Date?)
+
+data class ApiCredentials(val username: String, val password: String)

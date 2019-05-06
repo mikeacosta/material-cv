@@ -15,4 +15,5 @@ interface AppComponent {
     fun inject(target: CodeFragment)
     fun inject(target: ProfileFragment)
     fun inject(target: InfoFragment)
+    fun inject(target: SplashActivity)
 }
