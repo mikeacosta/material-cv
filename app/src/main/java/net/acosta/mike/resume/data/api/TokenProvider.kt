@@ -30,9 +30,15 @@ class TokenProvider @Inject constructor(private val context: Context, private va
 
         call.enqueue(object: Callback<String> {
             override fun onResponse(call: Call<String>, response: Response<String>) {
+                if (response.code() != 200){
+                    result.value = false
+                    return
+                }
+
                 token = response.body()
-                apiClient.token = token
-                result.value = true
+                result.value = token != null
+                if (token != null)
+                    apiClient.token = token
 
                 val sharedPref = PreferenceManager.getDefaultSharedPreferences(context)
                 with (sharedPref.edit()) {

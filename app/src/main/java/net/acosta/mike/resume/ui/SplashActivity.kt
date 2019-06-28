@@ -31,7 +31,11 @@ class SplashActivity : AppCompatActivity() {
 
         tokenProvider.setToken().observe(this, Observer{ result ->
             isTokenSet = result
-            proceed()
+
+            if (isTokenSet)
+                proceed()
+            else
+                stop()
         })
 
         val zoom: Animation = AnimationUtils.loadAnimation(this, R.anim.zoom)
@@ -67,5 +71,11 @@ class SplashActivity : AppCompatActivity() {
         }, delay.toLong())
 
         isAnimationDone = false
+    }
+
+    private fun stop()
+    {
+        imageViewSplash.visibility = View.GONE
+        // do something graceful
     }
 }
