@@ -15,7 +15,7 @@ class ApiClient(baseUrl: String = "https://kynp81ncr8.execute-api.us-west-2.amaz
     private val profileService: ProfileService
     private val authenticationService: AuthenticationService
 
-    private val apiCredentials = ApiCredentials()
+    private val apiCredentials = ApiCredentials("", "")
 
     var token: String = ""
 

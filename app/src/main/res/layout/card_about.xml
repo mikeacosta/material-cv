@@ -119,7 +119,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_margin="@dimen/textMargin"
-                    android:src="@drawable/ic_microsoft" />
+                    android:src="@drawable/ic_aws" />
 
                 <TextView
                     android:id="@+id/textViewMsCert"

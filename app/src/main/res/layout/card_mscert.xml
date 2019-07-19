@@ -10,7 +10,6 @@
     tools:ignore="ContentDescription">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -20,7 +19,7 @@
             android:layout_height="0dp"
             android:scaleType="centerInside"
             android:padding="20dp"
-            android:src="@drawable/mcp"
+            android:src="@drawable/awsdev"
             android:background="@color/gray"
             app:layout_constraintDimensionRatio="H,21:9"
             app:layout_constraintTop_toTopOf="parent"
