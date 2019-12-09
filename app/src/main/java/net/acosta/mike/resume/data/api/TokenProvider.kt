@@ -1,7 +1,7 @@
 package net.acosta.mike.resume.data.api
 
 import android.content.Context
-import android.preference.PreferenceManager
+import androidx.preference.PreferenceManager
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import net.acosta.mike.resume.R
@@ -17,11 +17,11 @@ class TokenProvider @Inject constructor(private val context: Context, private va
     private var result: MutableLiveData<Boolean> = MutableLiveData()
 
     fun setToken() : LiveData<Boolean> {
-        var token= PreferenceManager.getDefaultSharedPreferences(context)
+        val token= PreferenceManager.getDefaultSharedPreferences(context)
                 .getString(context.getString(R.string.tokenKey), null)
 
-        if (token != null){
-            apiClient.token = token
+        token?.let {
+            apiClient.token = it
             result.value = true
             return result
         }
@@ -35,20 +35,18 @@ class TokenProvider @Inject constructor(private val context: Context, private va
                     return
                 }
 
-                token = response.body()
-                result.value = token != null
-                if (token != null)
-                    apiClient.token = token
+                val responseToken = response.body()
+                result.value = responseToken != null
+                responseToken?.let { apiClient.token = it }
 
                 val sharedPref = PreferenceManager.getDefaultSharedPreferences(context)
                 with (sharedPref.edit()) {
-                    putString(context.getString(R.string.tokenKey), token)
+                    putString(context.getString(R.string.tokenKey), responseToken)
                     commit()
                 }
             }
 
             override fun onFailure(call: Call<String>, t: Throwable) {
-                token = null
                 result.value = false
             }
         })

@@ -9,14 +9,15 @@ import net.acosta.mike.resume.ui.AboutFragment
 import net.acosta.mike.resume.ui.CodeFragment
 import net.acosta.mike.resume.ui.CredsFragment
 
-class InfoPagerAdapter(private val context: Context, fm: FragmentManager) : FragmentPagerAdapter(fm) {
+class InfoPagerAdapter(private val context: Context, fm: FragmentManager)
+    : FragmentPagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
 
     companion object {
 
         private const val TAB_COUNT = 3
     }
 
-    override fun getItem(position: Int): Fragment? {
+    override fun getItem(position: Int): Fragment {
         when (position) {
             0 -> return CredsFragment.newInstance()
 
@@ -24,7 +25,7 @@ class InfoPagerAdapter(private val context: Context, fm: FragmentManager) : Frag
 
             2 -> return CodeFragment.newInstance()
         }
-        return null
+        return CredsFragment.newInstance()
     }
 
     override fun getCount(): Int {
